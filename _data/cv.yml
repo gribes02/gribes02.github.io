@@ -2,96 +2,73 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Guillem Ribes Espurz
     - name: Date of Birth
-      value: 14th March 1879
+      value: 30th May 2002
     - name: Languages
-      value: English, German
+      value: English, Spansih, Catalan, French, Italian
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Masters
+      institution: Technical University of Delft, The Netherlands
+      year: 2023 - present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Currently have a 7.75 GPA for the first two quartiles
+        - title: Relevant Coursework/Experience
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+            - Machine Learning (using TensorFlow and Scikit Learn)
+            - Path Planning (ORCA, MPC, RRT)
+            - Git, Github, ROS, OOP in C++
+    - title: Bachelors
+      institution: Technical University of Eindhoven, The Netherlands
+      year: 2020 - 2023
       description:
-        - Description 1.
-        - Description 2.
+        - title: Relevant Coursework/Experience 
+          contents:
+            - Data Analytics in Python (Numpy, Pandas)
+            - Siemens NX (CAD)
+        - Graduated with a 7.0 GPA and an 8.5 for the Bachelor Thesis
+    - title: Bachelors
+      institution: Technical University of Prague, Czech Republic
+      year: Feb 2023 - Jun 2023
+      description:
+        - Attended the course Cybernetics & Artificial Intelligence 
+        - title: Relevant Coursework/Experience 
+          contents:
+            - A* Search Algorithm
+            - Alpha Beta Pruning 
+            - Markov Decision Process
+            - Bayes Classification
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Software Developer - Infrastructure (Robotics Team)
+      institution: Technical University of Delft, The Netherlands
+      year: 2023 - present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Implementing Path Planning (ORCA) in Rust
+        - Currently on track to compete in Eindhoven in 2024 
+
+    - title: Hackathon
+      institution: HackCodeX Junction Hackathon, Latvia
+      year: Feb 2023
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+        - Worked in a team of 5 software developers in order to complete a fully working website 
+          which helps Alzheimer's patients remember crucial details of themselves by using the power 
+          of LLMs like ChatGP
+        - Ended up with an honorable mention
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+    - title: Nothing as of yet
+      year: Coming Soon
+      description: 
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> DJing, Playing Tennis

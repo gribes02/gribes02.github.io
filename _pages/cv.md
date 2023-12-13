@@ -4,8 +4,8 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 4
-cv_pdf: example_pdf.pdf
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+cv_pdf: Guillem CV December 2023.pdf
+description: Bellow is a condensed outline on my education and experience. For a more detailed version click the PDF icon on the right.
 toc:
   sidebar: left
 ---
