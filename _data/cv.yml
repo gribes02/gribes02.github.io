@@ -6,7 +6,7 @@
     - name: Date of Birth
       value: 30th May 2002
     - name: Languages
-      value: English, Spansih, Catalan, French, Italian
+      value: English, Spanish, Catalan, French, Italian
 
 - title: Education
   type: time_table
@@ -32,7 +32,7 @@
         - Graduated with a 7.0 GPA and an 8.5 for the Bachelor Thesis
     - title: Bachelors
       institution: Technical University of Prague, Czech Republic
-      year: Feb 2023 - Jun 2023
+      year: 2023
       description:
         - Attended the course Cybernetics & Artificial Intelligence 
         - title: Relevant Coursework/Experience 
@@ -67,6 +67,25 @@
     - title: Nothing as of yet
       year: Coming Soon
       description: 
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Path Planning
+      items: 
+        - ORCA
+        - Model Predictive Control
+        - RRT
+    - title: Machine Learning
+      items:
+        - Neural Networks
+        - Support Vector Machines
+        - Random Forest/Ensemble Methods
+        - 
+    - title: Computer Vision
+      items: 
+        - OpenCV 
+        - LiDAR Sensor
 
 - title: Other Interests
   type: list
