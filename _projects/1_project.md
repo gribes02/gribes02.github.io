@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: Small Size League RoboCup
+description: Implemented Path Planning on the Delft Mercurians Robots
 img: assets/img/12.jpg
 importance: 1
 category: work
