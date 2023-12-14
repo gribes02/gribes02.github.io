@@ -11,7 +11,7 @@ giscus_comments: true
 This project was a final assignment for the Machine Learning course in my Robotics Master. The whole aim was to make the robot succsefully reach the red cube by training a certain Machine Learning model on given training data. As it can be seen below the robot does that succsefully. 
 
 <figure>
-    <IMG SRC="assets/img/Machine Learning Project.gif">
+    <IMG SRC="/assets/img/Machine Learning Project.gif">
 </figure>
 
 For this project several steps were done.
