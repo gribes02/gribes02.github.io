@@ -16,14 +16,42 @@ This project was a final assignment for the Machine Learning course in my Roboti
 
 For this project several steps were done.
 1. Feature Extraction
-2. Fine-Tuneing model
+2. Fine-Tuning model
 3. Model Evaluation
 4. Presenting Solution
 
 
 ## Feature Extraction
 
-Working with images has too many 
+We decided to represent the position of the red box as the column and row of the center pixel of the red box. To calculate this for each image, a range of red, green, and blue values were found that isolates the red box from the rest of the image. Once all the pixels are found that adhere to the color mask (i.e. that belong to the red box), the mean row and column is determined out of this the set of red pixels and is rounded off to represent the center row and column of the red box. To check whether there is an actual relation between the location of the red box and the corresonding action, we created a scatter plot with the column and row of the red box on the x- and y-axis, respectively, and the colors of each dot representing the action label. This figure is shown below. Note that only the instances at time 1 are used for this figure.
+
+The following three points illustrate the primary reasons for performing dimensionality reduction on the feature space:
+
+1. High-dimensional data is hard to visualize
+2. High-dimensional data results in a greater risk of overfitting
+3. High-dimensional data requires a lot of computational resources and results in a high runtimes
+
+Hard to visualize: Data of more than 3 dimensions is often hard to visualize, which can make it hard to analyze higher-dimensional data to for instance find patterns in the data or to identify overfitting. However, since our feature space is only 2-dimensional, visualizing the data is not a problem.
+
+Risk of overfitting: The greater the dimensionality of the data, the farther the training instances become separated from each other, which makes the dataset more sparse and increases the risk of overfitting. However, our feature space is only 2-dimensional and as can be seen in the figure above, most instances are quite close together. Hence, dimensionality reduction does not seem to be necessary to reduce overfitting.
+
+Computational resources: Training a model using training data which contains a lot of features can take an incredibly long time. However, since we only have 2 features, training the models should not take very long.
+
+Hence, there is no need to perform dimensionality reduction on the feature space that was selected in section 2.
+
+## Fine-Tuning Model
+
+In this case the hyperparameters were fine tuned. This was done through 2 methods: Random Search Cross Validation and Grid Search Cross Validation.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/RandomSearch vs Grid Search.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left Demonstrates Grid Search and Right demonstrates Random Search
+</div>
+
 
 <!--
 <div class="row">
