@@ -5,7 +5,7 @@ permalink: /projects/
 description: Here are all my main projects that I have worked on! Eager to expand this list further!
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [work]
 horizontal: false
 ---
 
