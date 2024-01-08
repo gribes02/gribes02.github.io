@@ -5,7 +5,7 @@ description: Making a robot move towards a red box through the use of Machine Le
 img: assets/img/machinelearningproject.png
 importance: 2
 category: work
-giscus_comments: true
+giscus_comments: false
 ---
 
 This project was a final assignment for the Machine Learning course in my Robotics Master. The whole aim was to make the robot succsefully reach the red cube by training a certain Machine Learning model on given training data. As it can be seen below the robot does that succsefully. 
@@ -35,8 +35,6 @@ Hard to visualize: Data of more than 3 dimensions is often hard to visualize, wh
 Risk of overfitting: The greater the dimensionality of the data, the farther the training instances become separated from each other, which makes the dataset more sparse and increases the risk of overfitting. However, our feature space is only 2-dimensional and as can be seen in the figure above, most instances are quite close together. Hence, dimensionality reduction does not seem to be necessary to reduce overfitting.
 
 Computational resources: Training a model using training data which contains a lot of features can take an incredibly long time. However, since we only have 2 features, training the models should not take very long.
-
-Hence, there is no need to perform dimensionality reduction on the feature space that was selected in section 2.
 
 ## Model Comparison 
 
