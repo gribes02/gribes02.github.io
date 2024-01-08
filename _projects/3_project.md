@@ -1,12 +1,14 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
+title: Path Planning and Obstacle Avoidance 
+description: Making a Quadrotor manouver through a random generated maze using RRT*
 img: assets/img/7.jpg
 redirect: https://unsplash.com
 importance: 3
 category: fun
 ---
+
+
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
