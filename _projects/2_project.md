@@ -22,7 +22,7 @@ For this project several steps were done.
 
 ## Feature Extraction
 
-We decided to represent the position of the red box as the column and row of the center pixel of the red box. To calculate this for each image, a range of red, green, and blue values were found that isolates the red box from the rest of the image. Once all the pixels are found that adhere to the color mask (i.e. that belong to the red box), the mean row and column is determined out of this the set of red pixels and is rounded off to represent the center row and column of the red box. To check whether there is an actual relation between the location of the red box and the corresonding action, we created a scatter plot with the column and row of the red box on the x- and y-axis, respectively, and the colors of each dot representing the action label. This figure is shown below. Note that only the instances at time 1 are used for this figure.
+We decided to represent the position of the red box as the column and row of the center pixel of the red box. To calculate this for each image, a range of red, green, and blue values were found that isolates the red box from the rest of the image. Once all the pixels are found that adhere to the color mask (i.e. that belong to the red box), the mean row and column is determined out of this the set of red pixels and is rounded off to represent the center row and column of the red box. 
 
 The following three points illustrate the primary reasons for performing dimensionality reduction on the feature space:
 
