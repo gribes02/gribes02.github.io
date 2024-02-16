@@ -10,7 +10,7 @@ related_publications:
 
 ## Introduction
 
-As a Software Developer specializing in infrastructure, I play a key role within the Delft Mercurians, a dedicated student team focused on advancing robotics technology for the RoboCup Small Size League. In this role specifically I am working on the path planning of the robots by either implementing ORCA or Model Predictive Control.
+As a Software Developer specializing in infrastructure, I play a key role within the Delft Mercurians, a dedicated student team focused on advancing robotics technology for the RoboCup Small Size League. In this role specifically I am working on the path planning of the robots, this is done by first implementing RRT* for the global planner and having MPC as the local obstacle avoidance.
 
 ## Model Predictive Control
 
