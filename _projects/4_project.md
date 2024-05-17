@@ -7,7 +7,7 @@ importance: 2
 category: work 
 ---
 
-{% include repository/repo.html repository=site.data.repositories.github_repos[0] %}
+{% include repository.html name="Repo1" url="https://github.com/gribes02/CNN-Malware-Classification.git" %}
 
 # Deep Learning Project - Reproduction Study
 
