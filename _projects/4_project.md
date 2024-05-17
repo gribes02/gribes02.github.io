@@ -13,6 +13,15 @@ In this assignment, we reproduced the CNN presented in "Using convolutional neur
 
 ![Malware](assets/img/malware.png)
 
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/malware.png" title="Malware Binary Images" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Malware Binary Images
+</div>
+
 ### Hyperparameter Tuning
 
 Nested cross-validation was used in grid search to mitigate overfitting and yield a more dependable assessment of model performance. Regular cross-validation may lead to higher estimates of model performance because the model evaluation is done on seen data. Nested cross-validation performs an outer loop of cross-validation for model evaluation and an inner loop of cross-validation for hyperparameter tuning, ensuring that the model's performance is evaluated on unseen data during hyperparameter tuning. This helps to provide a more realistic estimation of the model's performance.
@@ -153,11 +162,7 @@ Once we had the best model it was ran on the Malimg dataset in order to compare 
     Confusion Matrix Base Image
 </div>
 
-
-
 ### Best Model Found From Grid Search
-
-![Confusion Matrix Best Image](assets/img/ConfusionMatrixBestModel.png)
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">

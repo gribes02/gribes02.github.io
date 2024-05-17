@@ -34,7 +34,7 @@ $$
 \vec{x}[k+1] = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \vec{x}[k] + T_s \cdot \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \vec{u}[k],
 $$
 
-where state \(\vec{x}\) is the position in the x and y directions, \(\begin{bmatrix} x & y \end{bmatrix}^\intercal \), \(\vec{u}\) are the velocity inputs sent to the robot, \(\begin{bmatrix} v_x & v_y \end{bmatrix}^\intercal \), and \(T_s\) is the sampling time.
+where state $$\vec{x}\$$ is the position in the $$x$$ and $$y$$ directions, $$\begin{bmatrix} x & y \end{bmatrix}^\intercal $$, $$\vec{u}$$ are the velocity inputs sent to the robot, $$\begin{bmatrix} v_x & v_y \end{bmatrix}^\intercal$$, and $$T_s$$ is the sampling time.
 
 #### Cost Function and Constraints
 
@@ -44,7 +44,7 @@ $$
 J = \sum_{k=0}^{N-1} \left[ \|x_k - r_k\|_{Q}^2 + \|u_k\|_{R}^2 \right] + \|x_N - r_N\|_{Q}^2,
 $$
 
-where \(r_k\) and \(r_N\) are the desired positions, and \(R\) and \(Q\) are weighting matrices determining the priority of tracking error vs. control input.
+where $$r_k$$ and $$r_N$$ are the desired positions, and $$R$$ and $$Q$$ are weighting matrices determining the priority of tracking error vs. control input.
 
 The optimization problem is then defined as:
 
@@ -64,7 +64,7 @@ $$
 \left\| p_{r} - p_{o} \right\|_2 \geq r_r + r_o,
 $$
 
-where \(p_r\) and \(p_o\) are the centers of the robot and obstacle, respectively, and \(r_r\) and \(r_o\) are their radii. Additionally, velocity constraints ensure the calculated trajectory is physically achievable.
+where $$p_r$$ and $$p_o$$ are the centers of the robot and obstacle, respectively, and $$r_r$$ and $$r_o$$ are their radii. Additionally, velocity constraints ensure the calculated trajectory is physically achievable.
 
 #### Solver
 
