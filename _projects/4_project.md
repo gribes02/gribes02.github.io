@@ -7,8 +7,6 @@ importance: 2
 category: work 
 ---
 
-{% include repository/repo.html name="Repo1" url="https://github.com/user/repo1" %}
-
 # Deep Learning Project - Reproduction Study
 
 In this assignment, we reproduced the CNN presented in "Using convolutional neural networks for classification of malware represented as images"* [1]. This CNN was then tested using 10-fold cross validation to determine whether we would achieve similar performance to the paper. Furthermore, we implemented nested cross validation to perform further hyperparameter tuning on the CNN. The best model architecture that was found was then trained and tested on a much larger dataset (~147GB) of malware images.
@@ -146,12 +144,29 @@ Once we had the best model it was ran on the Malimg dataset in order to compare 
 |23 |     0.979798   |  1.000000  |  0.989796  |
 |24 |     0.947867   |  1.000000  |  0.973236  |
 
-![Confusion Matrix Base Image](assets/img/ConfusionMatrixBaseModel.png)
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/ConfusionMatrixBaseModel.png" title="Confusion Matrix Base Image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Confusion Matrix Base Image
+</div>
+
 
 
 ### Best Model Found From Grid Search
 
 ![Confusion Matrix Best Image](assets/img/ConfusionMatrixBestModel.png)
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/ConfusionMatrixBestModel.png" title="Confusion Matrix Best Image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Confusion Matrix Best Image
+</div>
 
 
 |   |    Precision   |   Recall   |  F1 Score  |
@@ -187,6 +202,7 @@ As it can be seen both architectures results in very similar f1 scores where som
 ### Best Model on Bigger Dataset
 
 Once we found the best model it was applied to the larger dataset. Naturally the results are not nearly as good as the MalImg dataset given that for that particular dataset there are only 25 families and there are fewer images. However, the model still yielded reasonable results. The 10-fold cross validation of the best model on Akash's dataset yielded the following resutls:
+
 |        Folds | Accuracy | MAE |
 |--------------|:----:|:------------------:|
 | Fold 1     | 89% | 18.68 |
