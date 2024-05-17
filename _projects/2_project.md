@@ -1,6 +1,6 @@
 ---
 layout: page
-title: robot ai 
+title: Box Following Robot
 description: Making a robot move towards a red box through the use of Machine Learning 
 img: assets/img/machinelearningproject.png
 importance: 2
@@ -35,8 +35,6 @@ Hard to visualize: Data of more than 3 dimensions is often hard to visualize, wh
 Risk of overfitting: The greater the dimensionality of the data, the farther the training instances become separated from each other, which makes the dataset more sparse and increases the risk of overfitting. However, our feature space is only 2-dimensional and as can be seen in the figure above, most instances are quite close together. Hence, dimensionality reduction does not seem to be necessary to reduce overfitting.
 
 Computational resources: Training a model using training data which contains a lot of features can take an incredibly long time. However, since we only have 2 features, training the models should not take very long.
-
-## Model Comparison 
 
 ## Fine-Tuning Model
 
