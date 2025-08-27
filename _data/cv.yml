@@ -3,91 +3,104 @@
   contents:
     - name: Full Name
       value: Guillem Ribes Espurz
-    - name: Date of Birth
-      value: 30th May 2002
+    - name: Location
+      value: Delft, South Holland, The Netherlands
     - name: Languages
-      value: English, Spanish, Catalan, French, Italian
+      value: Spanish (Native), Catalan (Native), English (Fluent), Italian (B2), French (B1), German (A2)
 
 - title: Education
   type: time_table
   contents:
-    - title: Masters
+    - title: MSc Robotics
       institution: Technical University of Delft, The Netherlands
-      year: 2023 - present
+      year: 2023 - 2025
       description:
-        - Currently have a 7.75 GPA for the first two quartiles
-        - title: Relevant Coursework/Experience
+        - Achieved a 7.5 GPA with a Thesis grade of 8.0.
+        - title: Relevant Coursework
           contents:
-            - Machine Learning (using TensorFlow and Scikit Learn)
-            - Path Planning (ORCA, MPC, RRT)
-            - Git, Github, ROS, OOP in C++
-    - title: Bachelors
+            - Machine Learning (TensorFlow, Keras, Scikit-Learn, PyTorch)
+            - Path Planning (MPC, RRT*)
+    - title: BSc Mechanical Engineering
       institution: Technical University of Eindhoven, The Netherlands
       year: 2020 - 2023
       description:
-        - title: Relevant Coursework/Experience 
-          contents:
-            - Data Analytics in Python (Numpy, Pandas)
-            - Siemens NX (CAD)
-        - Graduated with a 7.0 GPA and an 8.5 for the Bachelor Thesis
-    - title: Bachelors
+        - Graduated with a 7.3 GPA and an 8.5 for the Bachelor Thesis.
+        - Bachelor Thesis&#58; Creating a shaft rescue robot prototype to save children stuck in boreholes.
+    - title: Exchange Program
       institution: Technical University of Prague, Czech Republic
       year: 2023
       description:
-        - Attended the course Cybernetics & Artificial Intelligence 
-        - title: Relevant Coursework/Experience 
+        - Attended the course Cybernetics & Artificial Intelligence.
+        - title: Relevant Coursework/Experience
           contents:
-            - A* Search Algorithm
-            - Alpha Beta Pruning 
-            - Markov Decision Process
-            - Bayes Classification
+            - Implemented A* search, alpha-beta pruning, and Markov decision processes in Python.
+    - title: High School Diploma
+      institution: International School of Basel (ISB), Switzerland
+      year: 2017 - 2020
+      description:
+        - Earned a Bi-Lingual IB Diploma (English, Spanish).
 
 - title: Experience
   type: time_table
   contents:
-    - title: Software Developer - Infrastructure (Robotics Team)
-      institution: Technical University of Delft, The Netherlands
-      year: 2023 - present
+    - title: Robotic Software Engineer Intern
+      institution: Eurecat, Barcelona
+      year: Feb 2025 – Sep 2025
       description:
-        - Implementing Path Planning (ORCA) in Rust
-        - Currently on track to compete in Eindhoven in 2024 
-
-    - title: Hackathon
-      institution: HackCodeX Junction Hackathon, Latvia
-      year: Feb 2023
+        - Explored VLA models like Octo and NVIDIA Gr00t to evaluate performance and generalization.
+        - Integrated LLMs to introduce reasoning capabilities to VLA models.
+        - Used the Franka Emika FR3 arm to perform various manipulation tasks.
+    - title: Robotic Software Engineer Intern
+      institution: Eurecat, Barcelona
+      year: Aug 2024 – Nov 2024
       description:
-        - Worked in a team of 5 software developers in order to complete a fully working website 
-          which helps Alzheimer's patients remember crucial details of themselves by using the power 
-          of LLMs like ChatGP
-        - Ended up with an honorable mention
+        - Benchmarked 3D SLAM and localization packages such as GLIM, Fast-LIO, and RTABMap.
+        - Implemented a full coverage path planning solution for a metro cleaning robot using Nav2.
 
-- title: Open Source Projects
+- title: Extracurricular Activities
   type: time_table
   contents:
-    - title: Nothing as of yet
-      year: Coming Soon
-      description: 
+    - title: Software Developer – Infrastructure (Robotics Team)
+      institution: Technical University of Delft, The Netherlands
+      year: 2023 - 2025
+      description:
+        - Specialized in Path Planning using RRT* for global pathfinding and MPC for local obstacle avoidance.
+        - Oversaw the attacking and defending strategy for robotic competitions.
+        - Placed 5th in the 2024 Eindhoven B division.
+    - title: Hackathon Participant
+      institution: Hack Codex Junction Hackathon, Riga
+      year: June 2023
+      description:
+        - Worked in a team of 5 to develop a website to help Alzheimer’s patients using LLMs.
+        - Received an honorable mention.
 
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Path Planning
-      items: 
-        - ORCA
-        - Model Predictive Control
-        - RRT
+    - title: Programming
+      items:
+        - Python
+        - C++
+        - ROS2
+        - Linux
+        - Git
+        - Docker
     - title: Machine Learning
       items:
-        - Neural Networks
-        - Support Vector Machines
-        - Random Forest/Ensemble Methods
-        - 
-    - title: Computer Vision
-      items: 
-        - OpenCV 
-        - LiDAR Sensor
+        - TensorFlow/Keras
+        - PyTorch
+    - title: Other
+      items:
+        - Siemens NX (CAD)
+    - title: Soft Skills
+      items:
+        - Leadership
+        - Critical Thinking
+        - Communication
+        - Teamwork
+        - Organization
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> DJing, Playing Tennis
+    - <u>Hobbies:</u> DJing, Tennis, Fitness, Bouldering, Meeting people

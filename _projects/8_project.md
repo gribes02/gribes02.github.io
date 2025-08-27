@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Robotic Software Engineer Intern (VLA & LLM)
+title: Increased Reasoning for Long-Horizon Tasks in a VLA
 description: Investigated the integration of Large Language Models (LLMs) with the GR00T Visual-Language-Action (VLA) model to improve performance on long-horizon robotic manipulation tasks.
 img: assets/img/12.jpg
 importance: 1

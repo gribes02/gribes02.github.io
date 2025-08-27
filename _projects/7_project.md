@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Robotic Software Engineer Intern (Navigation)
+title: Autonomous Metro Cleaning Robot
 description: Developed and validated localization and navigation strategies for an autonomous metro cleaning robot, involving extensive benchmarking of SLAM and coverage planning algorithms in a challenging real-world environment.
 img: assets/img/12.jpg
 importance: 1
