@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hugo/Terminal</title>
+    <title>Guillem/Terminal</title>
     <link rel="icon" type="image/jpeg" href="logo.jpg">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y501HY0RS"></script>
@@ -51,7 +51,7 @@
         <!-- Output Area -->
         <div id="output" class="flex-grow overflow-y-auto space-y-1 pb-4 scrollbar-hide">
             <div class="mb-4">
-                <p>Welcome to Hugo OS v1.0.0 (tty1)</p>
+                <p>Welcome to Guillem OS v1.0.0 (tty1)</p>
                 <p>System initialized at <span id="boot-time"></span></p>
                 <p>Type <span class="text-white font-bold">'help'</span> to see available commands.</p>
             </div>
@@ -59,7 +59,7 @@
 
         <!-- Input Area -->
         <div class="flex items-center gap-2 pt-2 border-t border-slate-800">
-            <span id="prompt" class="text-purple-400 whitespace-nowrap">visitor@hugo-portfolio:~$</span>
+            <span id="prompt" class="text-purple-400 whitespace-nowrap">visitor@guillem-portfolio:~$</span>
             <input type="text" id="cmd-input"
                 class="bg-transparent border-none outline-none flex-grow text-white font-mono placeholder-slate-700"
                 autocomplete="off" autofocus spellcheck="false">
@@ -72,16 +72,16 @@
             '/home/visitor': {
                 type: 'dir',
                 children: {
-                    'about_me.txt': { type: 'file', content: "My name is Hugo Sevilla Martínez. I am a Robotics Engineer passionate about Computer Vision, ROS, and Startups." },
-                    'contact_info.txt': { type: 'file', content: "Email: hugosema.19@gmail.com\nPhone: +34 647 73 12 52\nLinkedIn: linkedin.com/in/hugo-sevilla\nGitHub: github.com/Eugegeuge" },
-                    'technical_skills.log': { type: 'file', content: "[INFO] Loaded Modules:\n- Python (Expert)\n- ROS 2 (Advanced)\n- C++ (Intermediate)\n- Computer Vision (OpenCV, TensorFlow)\n- Unity 3D & VR" },
-                    'cv_full.pdf': { type: 'file', action: 'download', url: 'CV-en.pdf' },
+                    'about_me.txt': { type: 'file', content: "My name is Guillem Ribes. I am an MSc Robotics graduate from TU Delft, passionate about Path Planning, Computer Vision, and VLA Models." },
+                    'contact_info.txt': { type: 'file', content: "Email: gribes03@gmail.com\nPhone: +31 616168926\nLinkedIn: linkedin.com/in/guillem-ribes-espurz\nGitHub: github.com/gribes02" },
+                    'technical_skills.log': { type: 'file', content: "[INFO] Loaded Modules:\n- Python (Expert)\n- C++ (Intermediate)\n- ROS 2 (Advanced)\n- Path Planning (MPC, RRT*)\n- Computer Vision (OpenCV, TensorFlow)" },
+                    'cv.pdf': { type: 'file', action: 'download', url: 'CV.pdf' },
                     'projects': {
                         type: 'dir',
                         children: {
-                            'kinova_vr.sh': { type: 'file', action: 'navigate', url: 'kinova.html' },
-                            'mathsolver_ai.py': { type: 'file', action: 'navigate', url: 'mathsolver.html' },
-                            'drone_autonomous.md': { type: 'file', content: "# Autonomous Drone Tracking\n\nProposed Bachelor's Thesis project focusing on Edge AI object tracking on a quadcopter." }
+                            'shaft_rescue.txt': { type: 'file', content: "Bachelor Thesis: Creating a shaft rescue robot prototype to save children stuck in boreholes. Grade: 8.5." },
+                            'alzheimer_helper.txt': { type: 'file', content: "Hackathon Project: Website to help Alzheimer’s patients remember crucial details using LLMs." },
+                            'robotics_infrastructure.log': { type: 'file', content: "Robotics Team: Implemented RRT* for global path planning and MPC for local obstacle avoidance." }
                         }
                     }
                 }
