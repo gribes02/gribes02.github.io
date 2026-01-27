@@ -419,54 +419,127 @@
             <span class="text-purple-500 font-mono">04.</span> Featured Projects
         </h2>
         <div class="grid md:grid-cols-2 gap-8">
-            <div
-                class="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all hover:-translate-y-1 block tilt-card">
-                <div class="p-8">
+            
+            <!-- Project 1: MPC -->
+            <a href="projects/mpc-robocup.html"
+                class="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all hover:-translate-y-1 block tilt-card h-full">
+                <div class="p-8 h-full flex flex-col">
                     <div class="flex justify-between items-start mb-6">
-                        <i data-lucide="scan-line" class="w-10 h-10 text-purple-500"></i>
-                        <span
-                            class="text-xs text-green-500 border border-green-500/30 px-2 py-0.5 rounded bg-green-500/10 self-start">Completed</span>
+                        <i data-lucide="cpu" class="w-10 h-10 text-purple-500"></i>
+                        <span class="text-xs text-green-500 border border-green-500/30 px-2 py-0.5 rounded bg-green-500/10 self-start">Team Project</span>
                     </div>
                     <div class="block group">
                         <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                            Shaft Rescue Robot
-                            <span class="text-xs ml-2 text-slate-500 font-normal font-mono">Bachelor Thesis</span>
+                            MPC Controller for RoboCup SSL
                         </h3>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6">
-                        Designed and prototyped a shaft rescue robot to save children stuck in boreholes.
-                        Graduated with an 8.5 for the thesis.
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">
+                        Implementation of RRT* for global planning and Model Predictive Control (MPC) for local obstacle avoidance in dynamic environments.
                     </p>
                     <div class="flex flex-wrap gap-2 font-mono text-xs text-purple-300">
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">C++</span>
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">MPC</span>
                         <span class="bg-purple-900/30 px-2 py-1 rounded">Robotics</span>
-                        <span class="bg-purple-900/30 px-2 py-1 rounded">Prototyping</span>
                     </div>
                 </div>
-            </div>
-            <div
-                class="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all hover:-translate-y-1 block tilt-card">
-                <div class="p-8">
+            </a>
+
+            <!-- Project 2: Drone Path Planning -->
+            <a href="projects/drone-path-planning.html"
+                class="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all hover:-translate-y-1 block tilt-card h-full">
+                <div class="p-8 h-full flex flex-col">
                     <div class="flex justify-between items-start mb-6">
-                        <i data-lucide="globe" class="w-10 h-10 text-pink-500"></i>
-                         <span
-                            class="text-xs text-pink-500 border border-pink-500/30 px-2 py-0.5 rounded bg-pink-500/10 self-start">Hackathon</span>
+                        <i data-lucide="plane" class="w-10 h-10 text-purple-500"></i>
+                        <span class="text-xs text-green-500 border border-green-500/30 px-2 py-0.5 rounded bg-green-500/10 self-start">Completed</span>
                     </div>
                     <div class="block group">
                         <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                            Alzheimer’s Patient Helper
+                            Drone Path Planning with Dijkstra
                         </h3>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6">
-                        Hack Codex Junction Hackathon. Completed a fully working website to help Alzheimer’s patients remember crucial details using LLMs like ChatGPT.
-                        Honorable mention.
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">
+                        Global planner implementation using Dijkstra algorithm for a quadrotor in PyBullet simulation, ensuring safe maneuverability.
                     </p>
                     <div class="flex flex-wrap gap-2 font-mono text-xs text-purple-300">
-                        <span class="bg-purple-900/30 px-2 py-1 rounded">Web Dev</span>
-                        <span class="bg-purple-900/30 px-2 py-1 rounded">LLMs</span>
-                        <span class="bg-purple-900/30 px-2 py-1 rounded">ChatGPT</span>
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">Python</span>
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">Dijkstra</span>
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">PyBullet</span>
                     </div>
                 </div>
-            </div>
+            </a>
+
+            <!-- Project 3: Malware CNN -->
+            <a href="projects/malware-classification.html"
+                class="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all hover:-translate-y-1 block tilt-card h-full">
+                <div class="p-8 h-full flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <i data-lucide="shield-alert" class="w-10 h-10 text-purple-500"></i>
+                        <span class="text-xs text-green-500 border border-green-500/30 px-2 py-0.5 rounded bg-green-500/10 self-start">Completed</span>
+                    </div>
+                    <div class="block group">
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                            Malware Classification CNN
+                        </h3>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">
+                        Deep Learning reproduction study classifying malware images using CNNs with nested cross-validation and hyperparameter tuning.
+                    </p>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-purple-300">
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">Deep Learning</span>
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">CNN</span>
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">Python</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 4: Metro Cleaner -->
+            <a href="projects/metro-cleaner.html"
+                class="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all hover:-translate-y-1 block tilt-card h-full">
+                <div class="p-8 h-full flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <i data-lucide="train" class="w-10 h-10 text-purple-500"></i>
+                        <span class="text-xs text-green-500 border border-green-500/30 px-2 py-0.5 rounded bg-green-500/10 self-start">Internship</span>
+                    </div>
+                    <div class="block group">
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                            Autonomous Metro Cleaner
+                        </h3>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">
+                        Development of a robust autonomous navigation system using Nav2, Fast-LIO SLAM, and coverage planning for metro cleaning.
+                    </p>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-purple-300">
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">ROS 2</span>
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">Nav2</span>
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">SLAM</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 5: VLAs -->
+            <a href="projects/vla-tasks.html"
+                class="group bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-purple-500 transition-all hover:-translate-y-1 block tilt-card h-full">
+                <div class="p-8 h-full flex flex-col">
+                    <div class="flex justify-between items-start mb-6">
+                        <i data-lucide="brain-circuit" class="w-10 h-10 text-purple-500"></i>
+                        <span class="text-xs text-green-500 border border-green-500/30 px-2 py-0.5 rounded bg-green-500/10 self-start">Research</span>
+                    </div>
+                    <div class="block group">
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                            Long Horizon Tasks for VLAs
+                        </h3>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">
+                        Integrating Large Language Models with Visual-Language-Action models (GR00T) to improve reasoning for long-horizon robotic tasks.
+                    </p>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs text-purple-300">
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">VLA</span>
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">LLM</span>
+                        <span class="bg-purple-900/30 px-2 py-1 rounded">Robotics</span>
+                    </div>
+                </div>
+            </a>
+
         </div>
     </section>
 
