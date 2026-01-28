@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Transformer from Scratch - Guillem Ribes</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/jpeg" href="../logo.jpg">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y501HY0RS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4Y501HY0RS');
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css?v=1.1">
+
+    <!-- Tailwind Config -->
+    <script src="../assets/js/tailwind.config.js"></script>
+    
+    <!-- KaTeX for math -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+</head>
+
+<body class="bg-slate-900 text-slate-200 antialiased selection:bg-purple-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="font-bold text-xl font-mono text-purple-400">&lt;Guillem/&gt;</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="../index.html#home" class="hover:text-purple-400 transition-colors">Home</a>
+                <a href="../index.html#about" class="hover:text-purple-400 transition-colors">About</a>
+                <a href="../index.html#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+                <a href="../contact.html" class="hover:text-purple-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden border-b border-slate-800 bg-[#0b0f19]">
+        <div class="absolute inset-0 bg-purple-900/5 -z-10"></div>
+        <div class="tech-grid absolute inset-0 opacity-20 -z-10"></div>
+        
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <a href="../index.html#projects" class="inline-flex items-center text-purple-400 hover:text-purple-300 mb-6 transition-colors font-mono text-sm group">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform"></i> Back to Projects
+                </a>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    <span class="text-gradient">Unknown Environment</span><br>Vision Transformer from Scratch
+                </h1>
+                <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+                    A complete implementation of the Vision Transformer (ViT) architecture in pure PyTorch, trained on CIFAR-10.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-sm font-mono text-purple-300 flex items-center gap-1">
+                        <i class="devicon-pytorch-original text-sm"></i> PyTorch
+                    </span>
+                    <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-sm font-mono text-purple-300">ViT</span>
+                    <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-sm font-mono text-purple-300">Computer Vision</span>
+                </div>
+            </div>
+            
+            <div class="relative group tilt-card">
+                <div class="absolute -inset-1 bg-gradient-to-r from-orange-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden aspect-video flex items-center justify-center p-8 text-center text-slate-500">
+                    <div class="flex flex-col items-center gap-4">
+                        <i data-lucide="layers" class="w-16 h-16 text-orange-500"></i>
+                         <span class="text-sm font-mono">Transformer Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto space-y-24">
+            
+            <!-- Section 1: The Concept -->
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="text-purple-500 font-mono">01.</span> The Concept
+                </h2>
+                <div class="prose prose-invert prose-lg max-w-none text-slate-400">
+                    <p>
+                        The <strong>Vision Transformer (ViT)</strong> revolutionized computer vision by applying the standard Transformer architecture 
+                        directly to images, with the fewest possible modifications.
+                    </p>
+                    <p>
+                        In this project, I built a ViT from the ground up in PyTorch without relying on pre-built high-level libraries. 
+                        Key components implemented include <strong>Patch Embeddings</strong>, the <strong>CLS Token</strong>, and <strong>Multi-Head Self-Attention</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2: Technical Deep Dive -->
+            <div class="space-y-8">
+                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="text-purple-500 font-mono">02.</span> Technical Implementation
+                </h2>
+                
+                <div class="bg-slate-800/30 border border-slate-700 rounded-xl p-8">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <i data-lucide="code" class="text-purple-400"></i> Patch Embedding
+                    </h3>
+                    <p class="text-slate-400 mb-6">
+                        Instead of processing individual pixels, we split the image into fixed-size patches. This is efficiently implemented using a Conv2d layer 
+                        with kernel size and stride equal to the patch size.
+                    </p>
+
+                    <div class="code-block rounded-lg overflow-hidden mb-6">
+                        <div class="flex items-center justify-between px-4 py-2 bg-slate-900 border-b border-slate-800">
+                            <span class="text-xs font-mono text-slate-500">model.py</span>
+                             <div class="flex space-x-1.5">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-500/20"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/20"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-500/20"></div>
+                            </div>
+                        </div>
+                        <pre class="p-4 text-sm font-mono text-slate-300 overflow-x-auto"><code>class PatchEmbedding(nn.Module):
+    def __init__(self, in_channels=3, patch_size=4, embed_dim=128):
+        super().__init__()
+        self.patch_size = patch_size
+        self.conv = nn.Conv2d(in_channels, embed_dim, 
+                              kernel_size=patch_size, 
+                              stride=patch_size)
+
+    def forward(self, x):
+        # x: (B, C, H, W) -> (B, Embed_Dim, Grid_H, Grid_W)
+        x = self.conv(x) 
+        # Flatten -> (B, Embed_Dim, N_Patches)
+        x = x.flatten(2)
+        # Transpose -> (B, N_Patches, Embed_Dim)
+        return x.transpose(1, 2)</code></pre>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-slate-800/30 border border-slate-700 rounded-xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">Experimental Hybrid</h3>
+                        <p class="text-sm text-slate-400">
+                             I experimented with a <strong>CNN-ViT Hybrid</strong> stem to introduce inductive bias for local texture recognition before the global transformer layers.
+                        </p>
+                    </div>
+                     <div class="bg-slate-800/30 border border-slate-700 rounded-xl p-6">
+                        <h3 class="text-lg font-bold text-white mb-2">Positional Embedding</h3>
+                        <p class="text-sm text-slate-400">
+                             Since self-attention is permutation-invariant, learnable positional embeddings are added to the patch embeddings to retain spatial information.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Project Status & Context -->
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Status Card -->
+                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 hover:border-green-500/50 transition-colors">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <div class="p-2 bg-green-500/10 rounded-lg">
+                            <i data-lucide="bar-chart-3" class="w-5 h-5 text-green-500"></i>
+                        </div>
+                        Results (CIFAR-10)
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-slate-400">Final Accuracy</span>
+                            <span class="text-green-400 font-mono">66.44%</span>
+                        </div>
+                        <div class="w-full bg-slate-700 rounded-full h-1.5">
+                            <div class="bg-green-500 h-1.5 rounded-full" style="width: 66%"></div>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2">
+                            *Training on small datasets like CIFAR-10 is challenging for pure ViTs without massive pre-training.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Context Card -->
+                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-colors">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <div class="p-2 bg-purple-500/10 rounded-lg">
+                            <i data-lucide="github" class="w-5 h-5 text-purple-500"></i>
+                        </div>
+                        Source Code
+                    </h3>
+                    <div class="text-sm text-slate-400 space-y-4">
+                        <p>
+                            The full implementation is available as a Jupyter Notebook.
+                        </p>
+                        <a href="https://colab.research.google.com/drive/1eSUQZ-X6FMrjfUhUaSZ1VeIuhtgIQfia?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition-colors font-mono text-xs">
+                             <i data-lucide="external-link" class="w-3 h-3"></i> View on Colab
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-slate-500 text-sm bg-[#0b0f19] border-t border-slate-800">
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+            <a href="../index.html#projects" class="hover:text-white transition-colors">Projects</a>
+            <a href="../contact.html" class="hover:text-white transition-colors">Contact</a>
+        </div>
+        <p>&copy; 2026 Guillem Ribes. Built with <i data-lucide="heart" class="w-3 h-3 inline text-red-500"></i> & Code.</p>
+        <div class="mt-4">
+            <a href="../terminal.html" class="inline-flex items-center gap-1 text-slate-700 hover:text-green-500 transition-colors font-mono text-xs opacity-50 hover:opacity-100">
+                <i data-lucide="terminal" class="w-3 h-3"></i> >_ System Terminal
+            </a>
+        </div>
+    </footer>
+
+    <script> lucide.createIcons(); </script>
+    <script src="../assets/js/tilt.js"></script>
+</body>
+</html>
