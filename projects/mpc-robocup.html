@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPC Controller for RoboCup SSL - Guillem Ribes</title>
+    <title>MPC RoboCup SSL - Guillem Ribes</title>
     <meta name="robots" content="noindex">
     <link rel="icon" type="image/jpeg" href="../logo.jpg">
     <!-- Google tag (gtag.js) -->
@@ -36,28 +36,11 @@
               {left: '$', right: '$', display: false}
           ]
         });"></script>
-
-    <style>
-        .prose h2 { @apply text-2xl font-bold text-white mt-12 mb-6 border-b border-slate-700 pb-2; }
-        .prose h3 { @apply text-xl font-bold text-white mt-8 mb-4; }
-        .prose h4 { @apply text-lg font-bold text-purple-400 mt-6 mb-2; }
-        .prose p { @apply text-slate-400 leading-relaxed mb-6; }
-        .prose ul { @apply list-disc list-inside text-slate-400 mb-6 ml-4; }
-        .prose ol { @apply list-decimal list-inside text-slate-400 mb-6 ml-4; }
-        .prose code { @apply font-mono text-sm bg-slate-800 text-purple-300 px-1 py-0.5 rounded; }
-        .prose pre { @apply bg-slate-900 p-4 rounded-lg overflow-x-auto border border-slate-700 mb-6; }
-        .prose pre code { @apply bg-transparent text-slate-300 p-0; }
-        .prose img { @apply rounded-xl border border-slate-700 shadow-lg my-8 w-full max-w-2xl mx-auto; }
-        .prose table { @apply w-full text-left border-collapse border border-slate-700 mb-8; }
-        .prose th { @apply p-3 border border-slate-700 bg-slate-800 text-white font-bold; }
-        .prose td { @apply p-3 border border-slate-700 text-slate-400; }
-        .prose figure { @apply my-10 text-center; }
-        .prose figcaption { @apply text-sm text-slate-500 mt-2 italic; }
-    </style>
 </head>
 
 <body class="bg-slate-900 text-slate-200 antialiased selection:bg-purple-500 selection:text-white">
 
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="font-bold text-xl font-mono text-purple-400">&lt;Guillem/&gt;</div>
@@ -70,93 +53,170 @@
         </div>
     </nav>
 
-    <section class="pt-32 pb-24 px-6">
-        <div class="max-w-4xl mx-auto">
-            <a href="../index.html#projects" class="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors">
-                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> Back to Projects
-            </a>
-            
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">MPC Controller for the RoboCup SSL Team</h1>
-            <div class="flex gap-2 mb-8">
-                <span class="text-xs font-mono bg-purple-900/30 text-purple-300 px-2 py-1 rounded">C++</span>
-                <span class="text-xs font-mono bg-purple-900/30 text-purple-300 px-2 py-1 rounded">Robotics</span>
-                <span class="text-xs font-mono bg-purple-900/30 text-purple-300 px-2 py-1 rounded">Path Planning</span>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden border-b border-slate-800 bg-[#0b0f19]">
+        <div class="absolute inset-0 bg-purple-900/5 -z-10"></div>
+        <div class="tech-grid absolute inset-0 opacity-20 -z-10"></div>
+        
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <a href="../index.html#projects" class="inline-flex items-center text-purple-400 hover:text-purple-300 mb-6 transition-colors font-mono text-sm group">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform"></i> Back to Projects
+                </a>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    <span class="text-gradient">MPC Controller</span><br>for RoboCup SSL
+                </h1>
+                <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+                    Implementation of RRT* for global planning and Model Predictive Control (MPC) for local obstacle avoidance in dynamic soccer environments.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-sm font-mono text-purple-300 flex items-center gap-1">
+                        <i class="devicon-cplusplus-plain text-sm"></i> C++
+                    </span>
+                    <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-sm font-mono text-purple-300">MPC</span>
+                    <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-sm font-mono text-purple-300">RoboCup SSL</span>
+                </div>
             </div>
             
-            <div class="prose max-w-none">
-                <h2>Introduction</h2>
-                <p>As a Software Developer specializing in infrastructure, I play a key role within the Delft Mercurians, a dedicated student team focused on advancing robotics technology for the RoboCup Small Size League. Specifically, I work on the path planning of the robots, implementing RRT* for the global planner and using Model Predictive Control (MPC) for local obstacle avoidance.</p>
-
-                <h2>Path Planning Implementation</h2>
-
-                <h3>Rapidly-exploring Random Tree Star (RRT*)</h3>
-                <p>For global path planning, we implemented the RRT* algorithm. This method efficiently explores the search space and finds the optimal path by incrementally building a tree of possible paths. The RRT* ensures that the paths generated are not only feasible but also optimal in terms of the cost function defined.</p>
-
-                <h3>Model Predictive Control (MPC)</h3>
-                
-                <figure>
-                    <img src="../assets/img/mpc_visualization.gif" alt="MPC Visualization">
-                </figure>
-
-                <p>Currently, the team is integrating MPC for local obstacle avoidance. Starting with a simple 2D visualization, we implement MPC to handle dynamic environments effectively.</p>
-
-                <h4>State Space</h4>
-                <p>The first step was to determine the state space model. Given that the system is holonomic, we assumed a point mass for simplicity. The state space can be expressed as:</p>
-
-                $$
-                \vec{x}[k+1] = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \vec{x}[k] + T_s \cdot \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \vec{u}[k],
-                $$
-
-                <p>where state $\vec{x}$ is the position in the $x$ and $y$ directions, $\begin{bmatrix} x & y \end{bmatrix}^\intercal $, $\vec{u}$ are the velocity inputs sent to the robot, $\begin{bmatrix} v_x & v_y \end{bmatrix}^\intercal$, and $T_s$ is the sampling time.</p>
-
-                <h4>Cost Function and Constraints</h4>
-                <p>With the state space defined, the cost function and constraints are formulated as follows:</p>
-
-                $$
-                J = \sum_{k=0}^{N-1} \left[ \|x_k - r_k\|_{Q}^2 + \|u_k\|_{R}^2 \right] + \|x_N - r_N\|_{Q}^2,
-                $$
-
-                <p>where $r_k$ and $r_N$ are the desired positions, and $R$ and $Q$ are weighting matrices determining the priority of tracking error vs. control input.</p>
-
-                <p>The optimization problem is then defined as:</p>
-
-                $$
-                \begin{aligned}
-                \min_{u_k} \quad & \sum_{k=0}^{N-1} \left[ \|x_k - r_k\|_{Q}^2 + \|u_k\|_{R}^2 \right] + \|x_N - r_N\|_{Q}^2 \\
-                \text{subject to} \quad & \left\| p_{r} - p_{o} \right\|_2 \geq r_r + r_o, \\
-                & \vec{v} \leq \vec{v}_{lim}
-                \end{aligned}
-                $$
-
-                <h4>Obstacle Avoidance</h4>
-                <p>Obstacle avoidance is achieved by adding constraints to the cost function to prevent the robot from coming into contact with obstacles. The constraint is defined as:</p>
-
-                $$
-                \left\| p_{r} - p_{o} \right\|_2 \geq r_r + r_o,
-                $$
-
-                <p>where $p_r$ and $p_o$ are the centers of the robot and obstacle, respectively, and $r_r$ and $r_o$ are their radii. Additionally, velocity constraints ensure the calculated trajectory is physically achievable.</p>
-
-                <h4>Solver</h4>
-                <p>The full optimization problem is solved using the casADi solver, which is capable of handling dynamic and static environments effectively. This approach was inspired by the RoboDragons' 2022 implementation.</p>
-
-                <h2>Conclusion</h2>
-                <p>This project demonstrates the implementation of sophisticated path planning algorithms in the RoboCup Small Size League. By combining global and local planners, the Delft Mercurians' robots can navigate complex environments efficiently and safely.</p>
+            <div class="relative group tilt-card">
+                <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-green-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden aspect-video flex items-center justify-center">
+                    <img src="../assets/img/mpc_visualization.gif" alt="MPC Visualization" class="w-full h-full object-cover">
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 text-center text-slate-500 text-sm bg-[#0b0f19] border-t border-slate-800">
-        <a href="../contact.html" class="hover:text-purple-400 transition-colors block mb-2">
-            <p>&copy; 2026 Guillem Ribes. Built with <i data-lucide="heart"
-                    class="w-3 h-3 inline text-red-500"></i> &
-                Code.</p>
-        </a>
-        <a href="../terminal.html"
-            class="inline-flex items-center gap-1 text-slate-700 hover:text-green-500 transition-colors font-mono text-xs opacity-50 hover:opacity-100"
-            title="System Terminal">
-            <i data-lucide="terminal" class="w-3 h-3"></i> >_
-        </a>
+    <!-- Main Content -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto space-y-24">
+            
+            <!-- Section 1: The Concept -->
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="text-purple-500 font-mono">01.</span> The Concept
+                </h2>
+                <div class="prose prose-invert prose-lg max-w-none text-slate-400">
+                    <p>
+                        The <strong>Delft Mercurians</strong> are a student team competing in the RoboCup Small Size League (SSL). 
+                        In this fast-paced environment, robots must navigate dynamically to play soccer autonomously.
+                    </p>
+                    <p>
+                        As an Infrastructure Software Developer, I focused on the navigation stack, combining 
+                        <strong>Rapidly-exploring Random Tree Star (RRT*)</strong> for global path optimality and 
+                        <strong>Model Predictive Control (MPC)</strong> for reactive, local obstacle avoidance and trajectory tracking.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2: Technical Deep Dive -->
+            <div class="space-y-8">
+                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="text-purple-500 font-mono">02.</span> Technical Deep Dive
+                </h2>
+                
+                <!-- Implementation Details -->
+                <div class="grid gap-8">
+                    
+                    <div class="bg-slate-800/30 border border-slate-700 rounded-xl p-8">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                             <i data-lucide="function-square" class="text-purple-400"></i> Mathematical Formulation
+                        </h3>
+                        <p class="text-slate-400 mb-6">
+                            We model the holonomic robot as a point mass in the state space. The discrete-time state space model is:
+                        </p>
+                        <div class="bg-slate-900 rounded-lg p-6 border border-slate-800 overflow-x-auto mb-6">
+                            $$
+                            \vec{x}[k+1] = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \vec{x}[k] + T_s \cdot \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \vec{u}[k]
+                            $$
+                        </div>
+                        <p class="text-slate-400 mb-6">
+                            Where $\vec{x}$ is position and $\vec{u}$ is velocity input. The optimization problem minimizes tracking error and control effort:
+                        </p>
+                        <div class="bg-slate-900 rounded-lg p-6 border border-slate-800 overflow-x-auto">
+                            $$
+                            \begin{aligned}
+                            \min_{u_k} \quad & \sum_{k=0}^{N-1} \left[ \|x_k - r_k\|_{Q}^2 + \|u_k\|_{R}^2 \right] + \|x_N - r_N\|_{Q}^2 \\
+                            \text{subject to} \quad & \left\| p_{r} - p_{o} \right\|_2 \geq r_r + r_o, \\
+                            & \vec{v} \leq \vec{v}_{lim}
+                            \end{aligned}
+                            $$
+                        </div>
+                        <p class="text-slate-400 mt-6 text-sm">
+                            We utilize the <strong>CasADi</strong> solver to handle these logical constraints in real-time, ensuring the robot avoids dynamic obstacles (other players) while maintaining optimal trajectory.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 3: Project Status & Context -->
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Status Card -->
+                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 hover:border-green-500/50 transition-colors">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <div class="p-2 bg-green-500/10 rounded-lg">
+                            <i data-lucide="users" class="w-5 h-5 text-green-500"></i>
+                        </div>
+                        Team Performance
+                    </h3>
+                    <div class="space-y-4">
+                        <p class="text-slate-400 text-sm">
+                            The integration of these algorithms contributed to the team's performance in the 2024 competition.
+                        </p>
+                        <div class="flex items-center gap-3 bg-slate-900 p-3 rounded-lg border border-slate-800">
+                             <span class="text-3xl font-bold text-white">5th</span>
+                             <div class="flex flex-col">
+                                 <span class="text-xs text-slate-500 uppercase font-bold">Place</span>
+                                 <span class="text-sm text-green-400">Eindhoven 2024 (Div B)</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Context Card -->
+                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-colors">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <div class="p-2 bg-purple-500/10 rounded-lg">
+                            <i data-lucide="info" class="w-5 h-5 text-purple-500"></i>
+                        </div>
+                        Project Context
+                    </h3>
+                    <div class="text-sm text-slate-400 space-y-4">
+                        <p>
+                            <strong class="text-white block mb-1">Team</strong>
+                            Delft Mercurians (Student Team)
+                        </p>
+                        <p>
+                            <strong class="text-white block mb-1">Role</strong>
+                            Software Developer - Infrastructure
+                        </p>
+                        <p>
+                            <strong class="text-white block mb-1">Tech Stack</strong>
+                            C++, ROS 2, CasADi, CMake
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-slate-500 text-sm bg-[#0b0f19] border-t border-slate-800">
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+            <a href="../index.html#projects" class="hover:text-white transition-colors">Projects</a>
+            <a href="../contact.html" class="hover:text-white transition-colors">Contact</a>
+        </div>
+        <p>&copy; 2026 Guillem Ribes. Built with <i data-lucide="heart" class="w-3 h-3 inline text-red-500"></i> & Code.</p>
+        <div class="mt-4">
+            <a href="../terminal.html" class="inline-flex items-center gap-1 text-slate-700 hover:text-green-500 transition-colors font-mono text-xs opacity-50 hover:opacity-100">
+                <i data-lucide="terminal" class="w-3 h-3"></i> >_ System Terminal
+            </a>
+        </div>
     </footer>
 
     <script> lucide.createIcons(); </script>

@@ -31,28 +31,11 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
         onload="renderMathInElement(document.body);"></script>
-
-    <style>
-        .prose h2 { @apply text-2xl font-bold text-white mt-12 mb-6 border-b border-slate-700 pb-2; }
-        .prose h3 { @apply text-xl font-bold text-white mt-8 mb-4; }
-        .prose h4 { @apply text-lg font-bold text-purple-400 mt-6 mb-2; }
-        .prose p { @apply text-slate-400 leading-relaxed mb-6; }
-        .prose ul { @apply list-disc list-inside text-slate-400 mb-6 ml-4; }
-        .prose ol { @apply list-decimal list-inside text-slate-400 mb-6 ml-4; }
-        .prose code { @apply font-mono text-sm bg-slate-800 text-purple-300 px-1 py-0.5 rounded; }
-        .prose pre { @apply bg-slate-900 p-4 rounded-lg overflow-x-auto border border-slate-700 mb-6; }
-        .prose pre code { @apply bg-transparent text-slate-300 p-0; }
-        .prose img { @apply rounded-xl border border-slate-700 shadow-lg my-8 w-full max-w-2xl mx-auto; }
-        .prose table { @apply w-full text-left border-collapse border border-slate-700 mb-8; }
-        .prose th { @apply p-3 border border-slate-700 bg-slate-800 text-white font-bold; }
-        .prose td { @apply p-3 border border-slate-700 text-slate-400; }
-        .prose figure { @apply my-10 text-center; }
-        .prose figcaption { @apply text-sm text-slate-500 mt-2 italic; }
-    </style>
 </head>
 
 <body class="bg-slate-900 text-slate-200 antialiased selection:bg-purple-500 selection:text-white">
 
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="font-bold text-xl font-mono text-purple-400">&lt;Guillem/&gt;</div>
@@ -65,40 +48,172 @@
         </div>
     </nav>
 
-    <section class="pt-32 pb-24 px-6">
-        <div class="max-w-4xl mx-auto">
-            <a href="../index.html#projects" class="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors">
-                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> Back to Projects
-            </a>
-            
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Increasing Success Rate in Long Horizon Tasks for VLAs</h1>
-            <div class="flex gap-2 mb-8">
-                <span class="text-xs font-mono bg-purple-900/30 text-purple-300 px-2 py-1 rounded">VLA Models</span>
-                <span class="text-xs font-mono bg-purple-900/30 text-purple-300 px-2 py-1 rounded">LLMs</span>
-                <span class="text-xs font-mono bg-purple-900/30 text-purple-300 px-2 py-1 rounded">Robotics</span>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden border-b border-slate-800 bg-[#0b0f19]">
+        <div class="absolute inset-0 bg-purple-900/5 -z-10"></div>
+        <div class="tech-grid absolute inset-0 opacity-20 -z-10"></div>
+        
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <a href="../index.html#projects" class="inline-flex items-center text-purple-400 hover:text-purple-300 mb-6 transition-colors font-mono text-sm group">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform"></i> Back to Projects
+                </a>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                    <span class="text-gradient">Unknown Environment</span><br>Long Horizon VLAs
+                </h1>
+                <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+                    Integrating Large Language Models (LLMs) with Visual-Language-Action (VLA) models like GR00T to enable reasoning for complex robotic tasks.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-sm font-mono text-purple-300 flex items-center gap-1">
+                        <i data-lucide="brain-circuit" class="w-3 h-3"></i> VLA Models
+                    </span>
+                    <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-sm font-mono text-purple-300">LLMs</span>
+                    <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-sm font-mono text-purple-300">Robotics</span>
+                </div>
             </div>
             
-            <div class="prose max-w-none">
-                <p>This research-focused internship addressed a critical challenge in robotics: enabling robots to perform complex, long-horizon tasks in dynamic environments using natural language commands. While modern Visual-Language-Action (VLA) models excel at short-horizon behaviors, their performance often degrades over longer, multi-step sequences that require sustained reasoning and contextual awareness.</p>
-
-                <p>My work explored the hypothesis that these limitations could be mitigated by integrating a Large Language Model (LLM) into an existing VLA framework to provide higher-level planning and reasoning. The project was centered on NVIDIA's GR00T, a scalable, multi-task model for robotic manipulation.</p>
-
-                <p>The core of my investigation was to augment GR00T with LLM-based reasoning and systematically evaluate its effect on performance. This involved conducting experiments on a real-world robotic platform, the Franka Emika Research 3 arm, to perform a series of long-horizon pick-and-place tasks. By analyzing the success rates, partial completions, and failures, I aimed to contribute a deeper understanding of how language-guided reasoning interacts with perceptual and motor components in physically grounded settings. This project provided valuable insights into the benefits and limitations of integrating LLMs into embodied VLA systems for complex, real-world manipulation.</p>
+            <div class="relative group tilt-card">
+                <div class="absolute -inset-1 bg-gradient-to-r from-teal-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden aspect-video flex items-center justify-center p-8 text-center text-slate-500">
+                     <div class="flex flex-col items-center gap-4">
+                        <i data-lucide="bot" class="w-16 h-16 text-teal-500"></i>
+                        <span class="text-sm font-mono">GR00T Foundation Model</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 text-center text-slate-500 text-sm bg-[#0b0f19] border-t border-slate-800">
-        <a href="../contact.html" class="hover:text-purple-400 transition-colors block mb-2">
-            <p>&copy; 2026 Guillem Ribes. Built with <i data-lucide="heart"
-                    class="w-3 h-3 inline text-red-500"></i> &
-                Code.</p>
-        </a>
-        <a href="../terminal.html"
-            class="inline-flex items-center gap-1 text-slate-700 hover:text-green-500 transition-colors font-mono text-xs opacity-50 hover:opacity-100"
-            title="System Terminal">
-            <i data-lucide="terminal" class="w-3 h-3"></i> >_
-        </a>
+    <!-- Main Content -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto space-y-24">
+            
+            <!-- Section 1: The Concept -->
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="text-purple-500 font-mono">01.</span> The Challenge
+                </h2>
+                <div class="prose prose-invert prose-lg max-w-none text-slate-400">
+                    <p>
+                        Current <strong>Visual-Language-Action (VLA)</strong> models excel at short, atomic actions (e.g., "pick up the cup"). However, they struggle 
+                        significantly with <strong>long-horizon tasks</strong> that require multi-step reasoning, memory, and contextual awareness over time 
+                        In dynamic environments.
+                    </p>
+                    <p>
+                        This research hypothesized that integrating a <strong>Large Language Model (LLM)</strong> as a high-level "reasoner" could guide 
+                        the VLA policies, breaking down complex instructions into manageable sub-goals.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2: Technical Deep Dive -->
+            <div class="space-y-8">
+                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="text-purple-500 font-mono">02.</span> Technical Approach
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <div class="bg-slate-800/30 border border-slate-700 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                             <i data-lucide="layers" class="text-purple-400"></i> Hierarchy
+                        </h3>
+                        <p class="text-slate-400 mb-4">
+                            We implemented a layered architecture:
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="p-3 bg-slate-900 rounded border border-slate-800 flex items-center gap-3">
+                                <span class="text-purple-400 font-bold">1. High Level</span>
+                                <span class="text-slate-400 text-sm">LLM planner decomposes task</span>
+                            </li>
+                            <li class="p-3 bg-slate-900 rounded border border-slate-800 flex items-center gap-3">
+                                <span class="text-teal-400 font-bold">2. Low Level</span>
+                                <span class="text-slate-400 text-sm">VLA executes atomic actions</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-slate-800/30 border border-slate-700 rounded-xl p-6">
+                         <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                             <i data-lucide="microscope" class="text-teal-400"></i> Experimentation
+                        </h3>
+                        <p class="text-slate-400 mb-4">
+                             Systematic evaluation on a <strong>Franka Emika Research 3</strong> arm.
+                        </p>
+                         <ul class="text-sm text-slate-400 space-y-2 list-disc list-inside">
+                            <li>Baselines: GR00T (Zero-shot)</li>
+                            <li>Task: Multi-stage pick and place</li>
+                            <li>Metrics: Success Rate, Sub-goal completion</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 3: Project Status & Context -->
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Status Card -->
+                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 hover:border-green-500/50 transition-colors">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <div class="p-2 bg-green-500/10 rounded-lg">
+                            <i data-lucide="book-open-check" class="w-5 h-5 text-green-500"></i>
+                        </div>
+                        Outcomes
+                    </h3>
+                    <div class="space-y-3 text-slate-400 text-sm">
+                        <p >
+                            The study provided critical insights into the "reasoning gap" in current VLA models.
+                        </p>
+                         <p>
+                            We demonstrated that LLMs improve success rates in tasks requiring logical ordering of actions, but latency and grounding remain key challenges.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Context Card -->
+                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-colors">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <div class="p-2 bg-purple-500/10 rounded-lg">
+                            <i data-lucide="flask-conical" class="w-5 h-5 text-purple-500"></i>
+                        </div>
+                        Research Context
+                    </h3>
+                    <div class="text-sm text-slate-400 space-y-4">
+                        <p>
+                            <strong class="text-white block mb-1">Affiliation</strong>
+                            Eurecat - Robotics & Automation
+                        </p>
+                        <p>
+                            <strong class="text-white block mb-1">Focus</strong>
+                            Embodied AI, Foundation Models
+                        </p>
+                        <p>
+                            <strong class="text-white block mb-1">Period</strong>
+                             Feb 2025 – Oct 2025
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-slate-500 text-sm bg-[#0b0f19] border-t border-slate-800">
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+            <a href="../index.html#projects" class="hover:text-white transition-colors">Projects</a>
+            <a href="../contact.html" class="hover:text-white transition-colors">Contact</a>
+        </div>
+        <p>&copy; 2026 Guillem Ribes. Built with <i data-lucide="heart" class="w-3 h-3 inline text-red-500"></i> & Code.</p>
+        <div class="mt-4">
+            <a href="../terminal.html" class="inline-flex items-center gap-1 text-slate-700 hover:text-green-500 transition-colors font-mono text-xs opacity-50 hover:opacity-100">
+                <i data-lucide="terminal" class="w-3 h-3"></i> >_ System Terminal
+            </a>
+        </div>
     </footer>
 
     <script> lucide.createIcons(); </script>
