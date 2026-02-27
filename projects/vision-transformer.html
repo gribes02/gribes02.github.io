@@ -146,6 +146,48 @@
         # Transpose -> (B, N_Patches, Embed_Dim)
         return x.transpose(1, 2)</code></pre>
                     </div>
+
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2 mt-8">
+                        <i data-lucide="share-2" class="text-purple-400"></i> Multi-Head Self-Attention
+                    </h3>
+                    <p class="text-slate-400 mb-6">
+                        The core of the Transformer is the self-attention mechanism. It allows the model to weigh the importance of different patches relative to each other. 
+                        We split the embedding dimension into multiple heads to capture different types of relationships.
+                    </p>
+
+                    <div class="code-block rounded-lg overflow-hidden mb-6">
+                        <div class="flex items-center justify-between px-4 py-2 bg-slate-900 border-b border-slate-800">
+                            <span class="text-xs font-mono text-slate-500">attention.py</span>
+                                <div class="flex space-x-1.5">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-500/20"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/20"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-500/20"></div>
+                            </div>
+                        </div>
+                        <pre class="p-4 text-sm font-mono text-slate-300 overflow-x-auto"><code>class MultiheadSelfAttention(nn.Module):
+    def __init__(self, embed_dim, num_heads):
+        super().__init__()
+        self.head_dim = embed_dim // num_heads
+        self.scale = self.head_dim ** -0.5
+        self.qkv = nn.Linear(embed_dim, embed_dim * 3, bias=False)
+        self.proj = nn.Linear(embed_dim, embed_dim)
+
+    def forward(self, x):
+        B, N, C = x.shape
+        # qkv: (B, N, 3*C) -> (B, N, 3, num_heads, head_dim)
+        qkv = self.qkv(x).reshape(B, N, 3, self.num_heads, self.head_dim)
+        # Permute to (3, B, num_heads, N, head_dim)
+        qkv = qkv.permute(2, 0, 3, 1, 4)
+        q, k, v = qkv[0], qkv[1], qkv[2]
+
+        # Attention Score: (B, Heads, N, N)
+        attn = (q @ k.transpose(-2, -1)) * self.scale
+        attn = attn.softmax(dim=-1)
+
+        # Context: (B, Heads, N, Head_Dim) -> (B, N, C)
+        x = (attn @ v).transpose(1, 2).flatten(2)
+        return self.proj(x)</code></pre>
+                    </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
